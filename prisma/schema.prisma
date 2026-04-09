@@ -4,12 +4,20 @@ datasource db {
 
 generator client {
   provider = "prisma-client"
-  output   = "../src/generated/prisma"
+  output   = "../app/generated/prisma"
 }
 
+
 model User {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  email     String   @unique
-  name      String?
+  id            Int         @id @default(autoincrement())
+  email         String      @unique
+  name          String
+  passwordHash  String
+  role          Role        @default(CUSTOMER)
+  createdAt     DateTime    @default(now())
+}
+
+enum Role {
+  CUSTOMER
+  BUSINESS_OWNER
 }

@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Car Wash Genie",
-  description: "your local car wash booking service",
+  title: "Folio AI",
+  description: "Turn your resume into a stunning portfolio — powered by AI",
 };
 
 export default function RootLayout({
